@@ -2,13 +2,11 @@
  Run background processes on boot. Written in Kotlin for Android.
 
 
-## Add jitpack in root build.gradle
+## Add jitpack repository
 
 ```
-allprojects {
-   repositories {
-      maven { url 'https://jitpack.io' }
-   }
+repositories {
+   maven { url 'https://jitpack.io' }
 }
 ```
 
