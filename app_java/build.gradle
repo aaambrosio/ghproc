@@ -4,12 +4,12 @@ plugins {
 
 android {
     namespace 'app.aaambrosio.ghproc_java'
-    compileSdk 33
+    compileSdk 31
 
     defaultConfig {
         applicationId "app.aaambrosio.ghproc_java"
-        minSdk 26
-        targetSdk 33
+        minSdk 21
+        targetSdk 31
         versionCode 1
         versionName "1.0"
 
@@ -30,8 +30,8 @@ android {
 
 dependencies {
 
-    implementation 'androidx.appcompat:appcompat:1.5.1'
-    implementation 'com.google.android.material:material:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
     implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
     implementation project(':ghproc')
     testImplementation 'junit:junit:4.13.2'
