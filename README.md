@@ -18,7 +18,7 @@ dependencies {
 }
 ```
 
-## Usage in Kotlin
+## Kotlin usage examples
 
 ```kotlin
 GhostProcess.setNotificationChannelID("ghost_process_test_notification_channel_id")
@@ -36,7 +36,21 @@ GhostProcess.setProcessAction(object : GhostAction {
 GhostProcess.init(applicationContext)
 ```
 
-## Usage in Java
+```kotlin
+GhostProcess.setProcessLoopIntervals(5000, 5000)
+GhostProcess.setProcessAction(object : GhostAction {
+    override fun execute() {
+        // do something
+    }
+})
+GhostProcess.init(
+    applicationContext,
+    1001,
+    yourNotificationObject
+)
+```
+
+## Java usage examples
 
 ```java
 GhostProcess.setNotificationChannelID("ghost_process_test_notification_channel_id");
@@ -51,5 +65,16 @@ GhostProcess.setProcessAction(() -> {
 });
 GhostProcess.init(getApplicationContext());
 ```
+```java
+GhostProcess.setProcessLoopIntervals(5000, 5000);
+GhostProcess.setProcessAction(() -> {
+    // do something
+});
+GhostProcess.init(
+    getApplicationContext(),
+    1001,
+    yourNotificationObject
+);
+```
 \
-See [```app_kotlin```](https://github.com/aaambrosio/ghproc/tree/main/app_kotlin) and [```app_java```](https://github.com/aaambrosio/ghproc/tree/main/app_java) for examples.
+See [```app_kotlin```](https://github.com/aaambrosio/ghproc/tree/main/app_kotlin) and [```app_java```](https://github.com/aaambrosio/ghproc/tree/main/app_java) for project examples.
