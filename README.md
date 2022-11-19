@@ -14,7 +14,7 @@ repositories {
 
 ```
 dependencies {
-   implementation 'com.github.aaambrosio:ghproc:0.1.0'
+   implementation 'com.github.aaambrosio:ghproc:0.1.4'
 }
 ```
 
@@ -30,7 +30,7 @@ GhostProcess.setProcessLoopInterval(10000) // set interval to 10 seconds
 GhostProcess.setForegroundID(1001)
 GhostProcess.setProcessAction(object : GhostAction {
     override fun execute() {
-        // do something repeatedly
+        // do something
     }
 })
 GhostProcess.init(applicationContext)
@@ -47,7 +47,7 @@ GhostProcess.setNotificationContent("Background processes are running in the bac
 GhostProcess.setProcessLoopInterval(10000); // set interval to 10 seconds
 GhostProcess.setForegroundID(1001);
 GhostProcess.setProcessAction(() -> {
-    // do something repeatedly
+    // do something
 });
 GhostProcess.init(getApplicationContext());
 ```
