@@ -14,7 +14,7 @@ repositories {
 
 ```
 dependencies {
-   implementation 'com.github.aaambrosio:ghproc:0.1.5'
+   implementation 'com.github.aaambrosio:ghproc:0.1.6'
 }
 ```
 
@@ -26,7 +26,7 @@ GhostProcess.setNotificationChannelName("Background Process Notifications")
 GhostProcess.setNotificationIcon(R.drawable.ic_launcher_foreground)
 GhostProcess.setNotificationTitle("Ghost Process")
 GhostProcess.setNotificationContent("Background processes are running in the background")
-GhostProcess.setProcessLoopInterval(10000) // set interval to 10 seconds
+GhostProcess.setProcessLoopIntervals(5000, 5000)
 GhostProcess.setForegroundID(1001)
 GhostProcess.setProcessAction(object : GhostAction {
     override fun execute() {
@@ -44,7 +44,7 @@ GhostProcess.setNotificationChannelName("Background Process Notifications");
 GhostProcess.setNotificationIcon(R.drawable.ic_launcher_foreground);
 GhostProcess.setNotificationTitle("Ghost Process");
 GhostProcess.setNotificationContent("Background processes are running in the background");
-GhostProcess.setProcessLoopInterval(10000); // set interval to 10 seconds
+GhostProcess.setProcessLoopIntervals(5000, 5000);
 GhostProcess.setForegroundID(1001);
 GhostProcess.setProcessAction(() -> {
     // do something
