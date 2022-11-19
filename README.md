@@ -14,7 +14,7 @@ repositories {
 
 ```
 dependencies {
-   implementation 'com.github.aaambrosio:ghproc:0.1.4'
+   implementation 'com.github.aaambrosio:ghproc:0.1.5'
 }
 ```
 
@@ -52,4 +52,4 @@ GhostProcess.setProcessAction(() -> {
 GhostProcess.init(getApplicationContext());
 ```
 \
-See ```app_kotlin``` and ```app_java``` for examples.
+See [```app_kotlin```](https://github.com/aaambrosio/ghproc/tree/main/app_kotlin) and [```app_java```](https://github.com/aaambrosio/ghproc/tree/main/app_java) for examples.
