@@ -22,9 +22,11 @@ class GhostProcess : Service() {
 
     private fun executorTask() {
         try {
-            Thread.sleep(processLoopInterval)
+            Thread.sleep(preProcessLoopInterval)
 
             processAction?.execute()
+
+            Thread.sleep(postProcessLoopInterval)
         } catch (e: java.lang.Exception) {
             e.printStackTrace()
         }
@@ -77,7 +79,8 @@ class GhostProcess : Service() {
         private var GHOST_PROCESS_ACTIVE = false
 
         private var processAction: GhostAction? = null
-        private var processLoopInterval: Long = 5000
+        private var preProcessLoopInterval: Long = 5000
+        private var postProcessLoopInterval: Long = 5000
 
         private var notificationChannelID = ""
         private var notificationChannelName = ""
@@ -95,8 +98,9 @@ class GhostProcess : Service() {
         }
 
         @JvmStatic
-        fun setProcessLoopInterval(interval: Long) {
-            this.processLoopInterval = interval
+        fun setProcessLoopIntervals(preProcess: Long, postProcess: Long) {
+            this.preProcessLoopInterval = preProcess
+            this.postProcessLoopInterval = postProcess
         }
 
         @JvmStatic

@@ -26,7 +26,7 @@ public class App extends Application {
         GhostProcess.setNotificationIcon(R.drawable.ic_launcher_foreground);
         GhostProcess.setNotificationTitle("Ghost Process");
         GhostProcess.setNotificationContent("Background processes are running in the background");
-        GhostProcess.setProcessLoopInterval(10000);
+        GhostProcess.setProcessLoopIntervals(5000, 5000);
         GhostProcess.setForegroundID(1001);
         GhostProcess.setProcessAction(() -> {
             NotificationCompat.Builder builder = new NotificationCompat.Builder(getApplicationContext(), "app_java_notification_channel_id")
